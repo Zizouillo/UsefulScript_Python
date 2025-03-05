@@ -2,18 +2,14 @@ import os
 import win32com.client
 
 def change_author_in_directory(directory, new_author):
-    # Initialiser l'application COM pour interagir avec les fichiers Office
     shell = win32com.client.Dispatch("Shell.Application")
     namespace = shell.Namespace(directory)
 
-    # Parcourir tous les fichiers dans le répertoire
     for filename in os.listdir(directory):
         file_path = os.path.join(directory, filename)
 
-        # Vérifier si le fichier est un fichier Office (Word, Excel, PowerPoint)
         if filename.endswith(('.docx', '.xlsx', '.pptx')):
             try:
-                # Ouvrir le fichier Office
                 if filename.endswith('.docx'):
                     app = win32com.client.Dispatch("Word.Application")
                     doc = app.Documents.Open(file_path)
@@ -43,11 +39,8 @@ def change_author_in_directory(directory, new_author):
             print(f"{filename} n'est pas un fichier Office supporté.")
 
 if __name__ == "__main__":
-    # Spécifie le répertoire contenant les fichiers Office
     directory = r"C:\Users\Maxence\Documents\IT\Python\ENV_changement_auteur"
     
-    # Spécifie le nouvel auteur (défini une seule fois)
     new_author = "Nouvel Auteur"
 
-    # Appeler la fonction pour changer l'auteur
     change_author_in_directory(directory, new_author)

@@ -39,7 +39,7 @@ def change_author_in_directory(directory, new_author):
             print(f"{filename} n'est pas un fichier Office supporté.")
 
 if __name__ == "__main__":
-    directory = r"C:\Users\Maxence\Documents\IT\Python\ENV_changement_auteur"
+    directory = r"C:\path\office"
     
     new_author = "Nouvel Auteur"
 

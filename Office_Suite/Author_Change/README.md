@@ -21,12 +21,15 @@ Avant d'exécuter ce script, assurez-vous d'avoir installé **Python 3.x** et le
 # Utilisation
 
 1. **Modifier le répertoire cible**
+
 Ouvrez le fichier `author_change.py` et ajustez la variable `directory` pour pointer vers le dossier contenant vos fichiers Office.
 
-2. **Définir le nouvel auteur**
+4. **Définir le nouvel auteur**
+
 Modifiez la valeur de `new_author` dans le script.
 
-3. **Exécuter le script**
+5. **Exécuter le script**
+
 Lancez le script avec :
 `python author_change.py`
 
